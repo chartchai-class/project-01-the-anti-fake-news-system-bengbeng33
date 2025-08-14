@@ -3,7 +3,6 @@
     <Navbar @filter-changed="handleFilterChange" />
 
     <div class="px-4 sm:px-6 lg:px-8 py-6">
-      <!-- ส่ง array ว่าง เพื่อให้ NewsBoxes แสดงกล่อง placeholder -->
       <NewsBoxes :items="[]" />
     </div>
   </div>

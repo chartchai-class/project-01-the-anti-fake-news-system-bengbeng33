@@ -52,7 +52,7 @@
       "status": "NOT_FAKE",
       "reporter": "David Chan",
       "reportedAt": "2025-08-06T08:00:00Z",
-      "imageUrl": "https://picsum.photos/id/105/800/400",
+      "imageUrl": "https://picsum.photos/id/107/800/400",
       "stats": { "fake": 0, "notFake": 25 }
     },
     {
