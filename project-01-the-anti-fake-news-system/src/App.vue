@@ -1,14 +1,24 @@
 <template>
-  <div>
-    <nav>
-      <router-link to="/">Home</router-link>
-    </nav>
+  <div class="min-h-screen">
+    <Navbar @filter-changed="handleFilterChange" />
     <router-view />
   </div>
 </template>
 
 <script>
+import Navbar from './views/Navbar.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Navbar
+  },
+  methods: {
+    handleFilterChange(filter) {
+      // Handle filter changes here
+      // This will be implemented when news functionality is added
+      console.log('Filter changed to:', filter)
+    }
+  }
 }
 </script>
