@@ -1,14 +1,13 @@
 <template>
   <div>
-    <h2 class="text-2xl font-bold mb-6">Comments</h2>
-    <!-- Member 3 will implement comments display here -->
-    <p class="text-gray-600">Comments will be implemented here...</p>
+    <h1>Comments</h1>
+    <p>Comments for news ID: {{ id }}</p>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: "CommentsView",
-  props: ["id"],
-};
+  name: 'CommentsView',
+  props: ['id']
+}
 </script>
