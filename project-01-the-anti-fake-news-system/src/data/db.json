@@ -1,0 +1,135 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Scientists Discover New Species in Ocean Depths",
+      "shortDescription": "Marine biologists have found a new species of fish in the Mariana Trench.",
+      "fullDescription": "A team of marine biologists from the University of California has made a groundbreaking discovery in the depths of the Mariana Trench. The newly discovered species, tentatively named Pseudoliparis marianensis, was found at a depth of 7,500 meters. This discovery adds to our understanding of deep-sea biodiversity and the extreme conditions life can endure. The fish exhibits unique adaptations including transparent skin and enlarged fins that help it navigate the crushing pressures of the deep ocean.",
+      "status": "real",
+      "reporter": "Dr. Sarah Johnson",
+      "dateReported": "2025-08-10T10:30:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
+      "voteCount": {
+        "real": 45,
+        "fake": 8
+      }
+    },
+    {
+      "id": 2,
+      "title": "Local Man Claims to Have Invented Perpetual Motion Machine",
+      "shortDescription": "Amateur inventor says his device can run forever without external energy.",
+      "fullDescription": "John Smith, a 42-year-old mechanic from Springfield, claims he has successfully created a perpetual motion machine in his garage. The device, which he calls the 'Energy Infinity Generator,' allegedly produces more energy than it consumes. Smith has been working on the project for 15 years and refuses to share technical details, citing patent concerns. Several physicists have expressed skepticism, noting that such a device would violate the fundamental laws of thermodynamics. Smith plans to demonstrate his invention at the local science fair next month.",
+      "status": "fake",
+      "reporter": "Mike Thompson",
+      "dateReported": "2025-08-09T14:20:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800",
+      "voteCount": {
+        "real": 12,
+        "fake": 67
+      }
+    },
+    {
+      "id": 3,
+      "title": "New COVID-19 Variant Shows Resistance to Current Vaccines",
+      "shortDescription": "Health officials report a new strain with concerning mutations.",
+      "fullDescription": "The World Health Organization has identified a new COVID-19 variant, designated as BA.6.7, which shows significant mutations in its spike protein. Preliminary studies suggest this variant may have reduced susceptibility to current vaccines, though researchers emphasize that vaccines still provide protection against severe disease. The variant was first identified in samples from Southeast Asia and has since been detected in 12 countries. Health officials are closely monitoring its spread and working on updated vaccine formulations. The public is advised to continue following established health protocols.",
+      "status": "real",
+      "reporter": "Dr. Emily Chen",
+      "dateReported": "2025-08-08T09:15:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1584118624012-df056829fbd0?w=800",
+      "voteCount": {
+        "real": 89,
+        "fake": 23
+      }
+    },
+    {
+      "id": 4,
+      "title": "Aliens Land in Nevada Desert, Government Covers Up Evidence",
+      "shortDescription": "Witnesses claim to have seen UFO landing and alien contact.",
+      "fullDescription": "Multiple witnesses in rural Nevada report seeing a large spacecraft land in the desert last Tuesday night. According to the accounts, several humanoid beings emerged from the craft and appeared to collect samples before departing. Local resident Mary Williams recorded a blurry video on her phone, which has since gone viral on social media. Government officials have dismissed the reports as a weather balloon test, but conspiracy theorists claim this is part of an ongoing cover-up. No physical evidence has been independently verified by credible sources.",
+      "status": "fake",
+      "reporter": "Alex Rodriguez",
+      "dateReported": "2025-08-07T18:45:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=800",
+      "voteCount": {
+        "real": 34,
+        "fake": 145
+      }
+    },
+    {
+      "id": 5,
+      "title": "Electric Vehicle Sales Surpass Gas Cars for First Time",
+      "shortDescription": "Industry milestone reached as EV adoption accelerates globally.",
+      "fullDescription": "For the first time in automotive history, electric vehicle sales have exceeded traditional gasoline-powered cars in monthly sales figures. According to the International Energy Agency, EV sales reached 52% of total vehicle sales in July 2025, marking a historic shift in consumer preferences and industry focus. The milestone was driven by falling battery costs, improved charging infrastructure, and increased government incentives worldwide. Major automakers have announced plans to accelerate their transition to electric-only lineups, with several targeting complete phase-outs of internal combustion engines by 2030.",
+      "status": "real",
+      "reporter": "Jennifer Park",
+      "dateReported": "2025-08-06T11:00:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=800",
+      "voteCount": {
+        "real": 78,
+        "fake": 15
+      }
+    },
+    {
+      "id": 6,
+      "title": "Miracle Cure for Baldness Found in Kitchen Spice",
+      "shortDescription": "Dermatologists skeptical of viral social media hair growth claims.",
+      "fullDescription": "A viral TikTok video claiming that a mixture of common kitchen spices can regrow hair in just two weeks has garnered millions of views. The video, posted by user @hairguru23, demonstrates applying a paste made from turmeric, cinnamon, and olive oil to balding areas. Several users have posted before-and-after photos claiming dramatic results. However, dermatologists and trichologists have expressed strong skepticism about these claims, noting the lack of scientific evidence and warning about potential skin irritation from unproven remedies. The American Academy of Dermatology advises consulting medical professionals for hair loss treatments.",
+      "status": "fake",
+      "reporter": "Dr. Robert Kim",
+      "dateReported": "2025-08-05T16:30:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800",
+      "voteCount": {
+        "real": 28,
+        "fake": 92
+      }
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "newsId": 1,
+      "author": "Marine Biology Student",
+      "comment": "This is incredible! Deep sea discoveries always fascinate me. The adaptations these creatures develop are mind-blowing.",
+      "vote": "real",
+      "timestamp": "2025-08-10T11:15:00Z",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "newsId": 1,
+      "author": "Ocean Explorer",
+      "comment": "I've been following Dr. Johnson's work for years. Her team is very credible and this discovery aligns with recent deep sea research.",
+      "vote": "real",
+      "timestamp": "2025-08-10T12:30:00Z",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "newsId": 2,
+      "author": "Physics Teacher",
+      "comment": "This violates basic laws of thermodynamics. Perpetual motion machines are impossible - this is clearly fake news.",
+      "vote": "fake",
+      "timestamp": "2025-08-09T15:45:00Z",
+      "imageUrl": ""
+    },
+    {
+      "id": 4,
+      "newsId": 2,
+      "author": "Skeptical Engineer",
+      "comment": "I've seen dozens of these claims over the years. Without peer review and independent verification, this is pseudoscience.",
+      "vote": "fake",
+      "timestamp": "2025-08-09T16:20:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?w=400"
+    },
+    {
+      "id": 5,
+      "newsId": 3,
+      "author": "Healthcare Worker",
+      "comment": "This is concerning but not surprising. Viruses naturally mutate. The important thing is that vaccines still help prevent severe disease.",
+      "vote": "real",
+      "timestamp": "2025-08-08T10:00:00Z",
+      "imageUrl": ""
+    }
+  ]
+}
