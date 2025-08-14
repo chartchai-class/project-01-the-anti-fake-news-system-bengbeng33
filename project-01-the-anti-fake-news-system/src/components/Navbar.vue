@@ -66,16 +66,16 @@
   </nav>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: 'Navbar',
+  name: 'NavBar',
   data() {
     return {
       activeFilter: 'all'
     }
   },
   methods: {
-    setActiveFilter(filter) {
+    setActiveFilter(filter: string) {
       this.activeFilter = filter
       // Emit event to parent component to handle news filtering
       this.$emit('filter-changed', filter)
