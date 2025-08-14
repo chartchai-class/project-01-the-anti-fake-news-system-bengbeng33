@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+  background-image: url('https://i.pinimg.com/originals/db/9f/1c/db9f1c2c296ab041cbc7cbe3a0f6f3e8.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
 }
 
 nav {
