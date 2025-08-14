@@ -9,17 +9,18 @@
   </div>
 </template>
 
-<script>
-import Navbar from './components/Navbar.vue'
+<script lang="ts">
+import Navbar from '@/components/Navbar.vue'
+import NewsBoxes from '@/components/NewsBoxes.vue';
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    NewsBoxes
+    NewsBoxes,
   },
   methods: {
-    handleFilterChange(filter) {
+    handleFilterChange(filter: string) {
       // Handle filter changes here
       // This will be implemented when news functionality is added
       console.log('Filter changed to:', filter)
