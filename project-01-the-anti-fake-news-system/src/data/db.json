@@ -2,51 +2,69 @@
   "news": [
     {
       "id": 1,
-      "title": "Scientists Discover New Species in Ocean Depths",
-      "shortDescription": "Marine biologists have found a new species of fish in the Mariana Trench.",
-      "fullDescription": "A team of marine biologists from the University of California has made a groundbreaking discovery in the depths of the Mariana Trench. The newly discovered species, tentatively named Pseudoliparis marianensis, was found at a depth of 7,500 meters.",
-      "status": "real",
-      "reporter": "Dr. Sarah Johnson",
-      "dateReported": "2025-08-10T10:30:00Z",
-      "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
-      "voteCount": {
-        "real": 45,
-        "fake": 8
-      }
+      "title": "Local Market Flooded with Expired Goods",
+      "summary": "Residents report finding expired products on sale at the Sunday market.",
+      "content": "Multiple stalls in the central Sunday market were caught selling expired goods. Local authorities have begun inspections to prevent future incidents.",
+      "status": "FAKE",
+      "reporter": "Jane Smith",
+      "reportedAt": "2025-08-10T14:23:00Z",
+      "imageUrl": "https://picsum.photos/id/101/800/400",
+      "stats": { "fake": 12, "notFake": 3 }
     },
     {
       "id": 2,
-      "title": "Local Man Claims to Have Invented Perpetual Motion Machine",
-      "shortDescription": "Amateur inventor says his device can run forever without external energy.",
-      "fullDescription": "John Smith, a 42-year-old mechanic from Springfield, claims he has successfully created a perpetual motion machine in his garage. The device, which he calls the 'Energy Infinity Generator,' allegedly produces more energy than it consumes.",
-      "status": "fake",
-      "reporter": "Mike Thompson",
-      "dateReported": "2025-08-09T14:20:00Z",
-      "imageUrl": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800",
-      "voteCount": {
-        "real": 12,
-        "fake": 67
-      }
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "newsId": 1,
-      "author": "Marine Biology Student",
-      "comment": "This is incredible! Deep sea discoveries always fascinate me.",
-      "vote": "real",
-      "timestamp": "2025-08-10T11:15:00Z",
-      "imageUrl": ""
+      "title": "City Council Approves New Green Park",
+      "summary": "A new urban park is set to be built in the downtown area by 2026.",
+      "content": "The city council voted unanimously to convert an unused lot into a green park with walking trails, a pond, and a children’s playground.",
+      "status": "NOT_FAKE",
+      "reporter": "Michael Lee",
+      "reportedAt": "2025-08-09T09:10:00Z",
+      "imageUrl": "https://picsum.photos/id/102/800/400",
+      "stats": { "fake": 1, "notFake": 15 }
     },
     {
-      "id": 2,
-      "newsId": 2,
-      "author": "Physics Teacher",
-      "comment": "This violates basic laws of thermodynamics. Perpetual motion machines are impossible.",
-      "vote": "fake",
-      "timestamp": "2025-08-09T15:45:00Z",
-      "imageUrl": ""
+      "id": 3,
+      "title": "Schools to Introduce AI Tutors Next Semester",
+      "summary": "Education department plans to integrate AI tutoring into classrooms.",
+      "content": "Starting next semester, public schools will have access to AI-powered tutoring assistants designed to support teachers and provide personalized student feedback.",
+      "status": null,
+      "reporter": "Sara Thompson",
+      "reportedAt": "2025-08-08T16:40:00Z",
+      "imageUrl": "https://picsum.photos/id/103/800/400",
+      "stats": { "fake": 0, "notFake": 0 }
+    },
+    {
+      "id": 4,
+      "title": "Rumors of Free Public Transport Go Viral",
+      "summary": "Social media claims buses and trains will be free next month.",
+      "content": "A viral post suggested the government will make public transport free starting September, but transport officials have denied any such plans.",
+      "status": "FAKE",
+      "reporter": "Alex Nguyen",
+      "reportedAt": "2025-08-07T11:15:00Z",
+      "imageUrl": "https://picsum.photos/id/104/800/400",
+      "stats": { "fake": 18, "notFake": 5 }
+    },
+    {
+      "id": 5,
+      "title": "Tech Company Launches Affordable Solar Panels",
+      "summary": "A startup unveils cost-effective solar technology aimed at households.",
+      "content": "SolarBright has announced a new line of solar panels that are 30% cheaper than current market options, aiming to boost renewable energy adoption.",
+      "status": "NOT_FAKE",
+      "reporter": "David Chan",
+      "reportedAt": "2025-08-06T08:00:00Z",
+      "imageUrl": "https://picsum.photos/id/105/800/400",
+      "stats": { "fake": 0, "notFake": 25 }
+    },
+    {
+      "id": 6,
+      "title": "Mystery Animal Spotted in City Park",
+      "summary": "Photos of a strange creature roaming the park have surfaced online.",
+      "content": "Several visitors claim to have seen an unknown animal in Greenleaf Park. Experts say the photos are inconclusive and could be digitally altered.",
+      "status": null,
+      "reporter": "Emily Carter",
+      "reportedAt": "2025-08-05T17:55:00Z",
+      "imageUrl": "https://picsum.photos/id/106/800/400",
+      "stats": { "fake": 14, "notFake": 14 }
     }
-  ]
+  ]  
 }
