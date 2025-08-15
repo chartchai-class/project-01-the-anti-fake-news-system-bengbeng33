@@ -3,7 +3,6 @@
     {
       "id": 1,
       "title": "Local Market Flooded with Expired Goods",
-      "summary": "Residents report finding expired products on sale at the Sunday market.",
       "content": "Multiple stalls in the central Sunday market were caught selling expired goods. Local authorities have begun inspections to prevent future incidents.",
       "status": "FAKE",
       "reporter": "Jane Smith",
@@ -14,8 +13,7 @@
     {
       "id": 2,
       "title": "City Council Approves New Green Park",
-      "summary": "A new urban park is set to be built in the downtown area by 2026.",
-      "content": "The city council voted unanimously to convert an unused lot into a green park with walking trails, a pond, and a children’s playground.",
+      "content": "The city council voted unanimously to convert an unused lot into a green park with walking trails, a pond, and a children's playground.",
       "status": "NOT_FAKE",
       "reporter": "Michael Lee",
       "reportedAt": "2025-08-09T09:10:00Z",
@@ -25,7 +23,6 @@
     {
       "id": 3,
       "title": "Schools to Introduce AI Tutors Next Semester",
-      "summary": "Education department plans to integrate AI tutoring into classrooms.",
       "content": "Starting next semester, public schools will have access to AI-powered tutoring assistants designed to support teachers and provide personalized student feedback.",
       "status": null,
       "reporter": "Sara Thompson",
@@ -36,7 +33,6 @@
     {
       "id": 4,
       "title": "Rumors of Free Public Transport Go Viral",
-      "summary": "Social media claims buses and trains will be free next month.",
       "content": "A viral post suggested the government will make public transport free starting September, but transport officials have denied any such plans.",
       "status": "FAKE",
       "reporter": "Alex Nguyen",
@@ -47,7 +43,6 @@
     {
       "id": 5,
       "title": "Tech Company Launches Affordable Solar Panels",
-      "summary": "A startup unveils cost-effective solar technology aimed at households.",
       "content": "SolarBright has announced a new line of solar panels that are 30% cheaper than current market options, aiming to boost renewable energy adoption.",
       "status": "NOT_FAKE",
       "reporter": "David Chan",
@@ -58,13 +53,352 @@
     {
       "id": 6,
       "title": "Mystery Animal Spotted in City Park",
-      "summary": "Photos of a strange creature roaming the park have surfaced online.",
       "content": "Several visitors claim to have seen an unknown animal in Greenleaf Park. Experts say the photos are inconclusive and could be digitally altered.",
       "status": null,
       "reporter": "Emily Carter",
       "reportedAt": "2025-08-05T17:55:00Z",
       "imageUrl": "https://picsum.photos/id/106/800/400",
       "stats": { "fake": 14, "notFake": 14 }
+    },
+    {
+      "id": 7,
+      "title": "New Restaurant Claims to Serve Alien Cuisine",
+      "content": "A downtown restaurant is advertising 'authentic alien cuisine' with dishes made from 'space ingredients.' Health inspectors are investigating the claims.",
+      "status": "FAKE",
+      "reporter": "Lisa Wang",
+      "reportedAt": "2025-08-04T12:30:00Z",
+      "imageUrl": "https://picsum.photos/id/108/800/400",
+      "stats": { "fake": 22, "notFake": 2 }
+    },
+    {
+      "id": 8,
+      "title": "Local Library Receives Million-Dollar Donation",
+      "content": "The Central Library has received a $1.2 million donation from an anonymous benefactor to expand their digital resources and children's section.",
+      "status": "NOT_FAKE",
+      "reporter": "Robert Johnson",
+      "reportedAt": "2025-08-03T15:45:00Z",
+      "imageUrl": "https://picsum.photos/id/109/800/400",
+      "stats": { "fake": 1, "notFake": 31 }
+    },
+    {
+      "id": 9,
+      "title": "Weather App Predicts Snow in August",
+      "content": "A popular weather app is showing snow predictions for next week, causing confusion among users. Meteorologists say this is a technical glitch.",
+      "status": "FAKE",
+      "reporter": "Maria Garcia",
+      "reportedAt": "2025-08-02T10:20:00Z",
+      "imageUrl": "https://picsum.photos/id/110/800/400",
+      "stats": { "fake": 28, "notFake": 3 }
+    },
+    {
+      "id": 10,
+      "title": "City Announces Electric Bus Fleet Expansion",
+      "content": "The transportation department has announced plans to replace 50 diesel buses with electric models by the end of the year, reducing emissions by 40%.",
+      "status": "NOT_FAKE",
+      "reporter": "James Wilson",
+      "reportedAt": "2025-08-01T14:15:00Z",
+      "imageUrl": "https://picsum.photos/id/111/800/400",
+      "stats": { "fake": 2, "notFake": 19 }
+    },
+    {
+      "id": 11,
+      "title": "Viral Video Claims Time Travel Discovery",
+      "content": "A viral video shows what appears to be a person from the future. Scientists have debunked the video as a sophisticated hoax using AI technology.",
+      "status": "FAKE",
+      "reporter": "Tom Anderson",
+      "reportedAt": "2025-07-31T18:30:00Z",
+      "imageUrl": "https://picsum.photos/id/112/800/400",
+      "stats": { "fake": 45, "notFake": 8 }
+    },
+    {
+      "id": 12,
+      "title": "New Community Garden Opens Downtown",
+      "content": "A community garden with 50 plots has opened in the heart of downtown, providing fresh produce and green space for urban residents.",
+      "status": "NOT_FAKE",
+      "reporter": "Sarah Kim",
+      "reportedAt": "2025-07-30T09:00:00Z",
+      "imageUrl": "https://picsum.photos/id/113/800/400",
+      "stats": { "fake": 0, "notFake": 27 }
+    },
+    {
+      "id": 13,
+      "title": "Social Media Post Claims Government Surveillance",
+      "content": "A widely shared post claims the government is monitoring all social media activity. Officials have denied these allegations as baseless.",
+      "status": "FAKE",
+      "reporter": "Chris Martinez",
+      "reportedAt": "2025-07-29T16:45:00Z",
+      "imageUrl": "https://picsum.photos/id/114/800/400",
+      "stats": { "fake": 33, "notFake": 12 }
+    },
+    {
+      "id": 14,
+      "title": "Local Artist Wins International Award",
+      "content": "Local painter Elena Rodriguez has won the prestigious International Art Prize for her series on urban transformation and community resilience.",
+      "status": "NOT_FAKE",
+      "reporter": "Jennifer Brown",
+      "reportedAt": "2025-07-28T11:20:00Z",
+      "imageUrl": "https://picsum.photos/id/115/800/400",
+      "stats": { "fake": 1, "notFake": 23 }
+    },
+    {
+      "id": 15,
+      "title": "Rumor Spreads About Free Internet for All",
+      "content": "A message circulating online claims the city will provide free high-speed internet to all residents. City officials have confirmed this is false.",
+      "status": "FAKE",
+      "reporter": "Kevin Davis",
+      "reportedAt": "2025-07-27T13:10:00Z",
+      "imageUrl": "https://picsum.photos/id/116/800/400",
+      "stats": { "fake": 19, "notFake": 6 }
+    },
+    {
+      "id": 16,
+      "title": "New Recycling Program Launches Successfully",
+      "content": "The city's new comprehensive recycling program has diverted 60% of waste from landfills in its first month, exceeding initial projections.",
+      "status": "NOT_FAKE",
+      "reporter": "Amanda White",
+      "reportedAt": "2025-07-26T08:30:00Z",
+      "imageUrl": "https://picsum.photos/id/117/800/400",
+      "stats": { "fake": 0, "notFake": 18 }
+    },
+    {
+      "id": 17,
+      "title": "Alien Abduction Claims Surface Online",
+      "content": "Multiple social media posts claim alien abductions occurred last night. Police have received no reports and experts dismiss these as hoaxes.",
+      "status": "FAKE",
+      "reporter": "Daniel Taylor",
+      "reportedAt": "2025-07-25T20:15:00Z",
+      "imageUrl": "https://picsum.photos/id/118/800/400",
+      "stats": { "fake": 52, "notFake": 4 }
+    },
+    {
+      "id": 18,
+      "title": "Local Hospital Receives Advanced MRI Machine",
+      "content": "City General Hospital has installed a state-of-the-art MRI machine, reducing wait times for scans from 3 weeks to 3 days.",
+      "status": "NOT_FAKE",
+      "reporter": "Rachel Green",
+      "reportedAt": "2025-07-24T14:50:00Z",
+      "imageUrl": "https://picsum.photos/id/119/800/400",
+      "stats": { "fake": 1, "notFake": 29 }
+    },
+    {
+      "id": 19,
+      "title": "Viral Post Claims End of World Prediction",
+      "content": "A viral post claims a famous psychic predicted the world will end next month. The psychic in question has denied making any such prediction.",
+      "status": "FAKE",
+      "reporter": "Mark Thompson",
+      "reportedAt": "2025-07-23T17:25:00Z",
+      "imageUrl": "https://picsum.photos/id/120/800/400",
+      "stats": { "fake": 38, "notFake": 7 }
+    },
+    {
+      "id": 20,
+      "title": "New Bike Sharing Program Launches",
+      "content": "The city has launched a bike sharing program with 200 bicycles available at 20 stations across downtown, promoting eco-friendly transportation.",
+      "status": "NOT_FAKE",
+      "reporter": "Sophie Chen",
+      "reportedAt": "2025-07-22T10:40:00Z",
+      "imageUrl": "https://picsum.photos/id/121/800/400",
+      "stats": { "fake": 0, "notFake": 22 }
+    },
+    {
+      "id": 21,
+      "title": "Fake News About Celebrity Death Circulates",
+      "content": "Social media posts claiming a famous actor has died are spreading rapidly. The actor's representatives have confirmed they are alive and well.",
+      "status": "FAKE",
+      "reporter": "Laura Miller",
+      "reportedAt": "2025-07-21T19:30:00Z",
+      "imageUrl": "https://picsum.photos/id/122/800/400",
+      "stats": { "fake": 67, "notFake": 9 }
+    },
+    {
+      "id": 22,
+      "title": "Local Startup Wins Innovation Award",
+      "content": "Tech startup GreenSolutions has won the National Innovation Award for their water purification technology that helps rural communities.",
+      "status": "NOT_FAKE",
+      "reporter": "Peter Jackson",
+      "reportedAt": "2025-07-20T12:15:00Z",
+      "imageUrl": "https://picsum.photos/id/123/800/400",
+      "stats": { "fake": 0, "notFake": 16 }
+    },
+    {
+      "id": 23,
+      "title": "Hoax About Free Gasoline Spreads",
+      "content": "A message claiming gas stations will give free gasoline to all customers tomorrow is circulating. Gas station owners have denied this claim.",
+      "status": "FAKE",
+      "reporter": "Nicole Adams",
+      "reportedAt": "2025-07-19T15:20:00Z",
+      "imageUrl": "https://picsum.photos/id/124/800/400",
+      "stats": { "fake": 24, "notFake": 5 }
+    },
+    {
+      "id": 24,
+      "title": "New Public Wi-Fi Network Installed",
+      "content": "The city has installed free public Wi-Fi in all major parks and downtown areas, providing internet access to residents and visitors.",
+      "status": "NOT_FAKE",
+      "reporter": "Carlos Rodriguez",
+      "reportedAt": "2025-07-18T09:45:00Z",
+      "imageUrl": "https://picsum.photos/id/125/800/400",
+      "stats": { "fake": 1, "notFake": 31 }
+    },
+    {
+      "id": 25,
+      "title": "Fake Lottery Winner Announcement",
+      "content": "Social media posts claim someone won a $50 million lottery jackpot in our city. Lottery officials confirm no such winning ticket was sold.",
+      "status": "FAKE",
+      "reporter": "Hannah Lee",
+      "reportedAt": "2025-07-17T21:10:00Z",
+      "imageUrl": "https://picsum.photos/id/126/800/400",
+      "stats": { "fake": 41, "notFake": 3 }
+    },
+    {
+      "id": 26,
+      "title": "Local Food Bank Receives Major Donation",
+      "content": "A local food bank has received a $500,000 donation from a corporate foundation, allowing them to serve 10,000 more families monthly.",
+      "status": "NOT_FAKE",
+      "reporter": "Michael Scott",
+      "reportedAt": "2025-07-16T11:30:00Z",
+      "imageUrl": "https://picsum.photos/id/127/800/400",
+      "stats": { "fake": 0, "notFake": 28 }
+    },
+    {
+      "id": 27,
+      "title": "Viral Post Claims Government Secret Plan",
+      "content": "A viral post claims the government has a secret plan to control the weather. Meteorologists and officials have dismissed this as conspiracy theory.",
+      "status": "FAKE",
+      "reporter": "Jessica Wong",
+      "reportedAt": "2025-07-15T16:55:00Z",
+      "imageUrl": "https://picsum.photos/id/128/800/400",
+      "stats": { "fake": 29, "notFake": 11 }
+    },
+    {
+      "id": 28,
+      "title": "New Community Center Opens",
+      "content": "A new community center with fitness facilities, meeting rooms, and youth programs has opened in the north district, serving 5,000 residents.",
+      "status": "NOT_FAKE",
+      "reporter": "Andrew Clark",
+      "reportedAt": "2025-07-14T08:20:00Z",
+      "imageUrl": "https://picsum.photos/id/129/800/400",
+      "stats": { "fake": 0, "notFake": 19 }
+    },
+    {
+      "id": 29,
+      "title": "Hoax About Free College Education",
+      "content": "A message circulating claims all college education will be free starting next year. Education officials have confirmed this is not true.",
+      "status": "FAKE",
+      "reporter": "Stephanie Moore",
+      "reportedAt": "2025-07-13T14:40:00Z",
+      "imageUrl": "https://picsum.photos/id/130/800/400",
+      "stats": { "fake": 35, "notFake": 8 }
+    },
+    {
+      "id": 30,
+      "title": "Local Restaurant Wins National Award",
+      "content": "Downtown restaurant 'Taste of Home' has won the National Restaurant Association's Best New Restaurant award for their innovative fusion cuisine.",
+      "status": "NOT_FAKE",
+      "reporter": "Ryan Johnson",
+      "reportedAt": "2025-07-12T12:05:00Z",
+      "imageUrl": "https://picsum.photos/id/131/800/400",
+      "stats": { "fake": 1, "notFake": 24 }
+    },
+    {
+      "id": 31,
+      "title": "Fake News About Water Contamination",
+      "content": "Social media posts claim the city's water supply is contaminated with dangerous chemicals. Water department officials have confirmed the water is safe.",
+      "status": "FAKE",
+      "reporter": "Melissa Turner",
+      "reportedAt": "2025-07-11T18:25:00Z",
+      "imageUrl": "https://picsum.photos/id/132/800/400",
+      "stats": { "fake": 43, "notFake": 6 }
+    },
+    {
+      "id": 32,
+      "title": "New Solar Farm Completed",
+      "content": "A 50-acre solar farm has been completed on the city's outskirts, generating enough electricity to power 3,000 homes and reducing carbon emissions.",
+      "status": "NOT_FAKE",
+      "reporter": "Brian Wilson",
+      "reportedAt": "2025-07-10T10:15:00Z",
+      "imageUrl": "https://picsum.photos/id/133/800/400",
+      "stats": { "fake": 0, "notFake": 26 }
+    },
+    {
+      "id": 33,
+      "title": "Viral Post Claims Time Machine Invention",
+      "content": "A viral post claims a local scientist has invented a working time machine. The scientist mentioned has denied any such invention or claims.",
+      "status": "FAKE",
+      "reporter": "Diana Foster",
+      "reportedAt": "2025-07-09T20:50:00Z",
+      "imageUrl": "https://picsum.photos/id/134/800/400",
+      "stats": { "fake": 56, "notFake": 4 }
+    },
+    {
+      "id": 34,
+      "title": "New Public Art Installation Unveiled",
+      "content": "A stunning public art installation featuring recycled materials has been unveiled in the city square, created by local artist collective 'Green Dreams'.",
+      "status": "NOT_FAKE",
+      "reporter": "Gregory Harris",
+      "reportedAt": "2025-07-08T13:35:00Z",
+      "imageUrl": "https://picsum.photos/id/135/800/400",
+      "stats": { "fake": 0, "notFake": 21 }
+    },
+    {
+      "id": 35,
+      "title": "Hoax About Free Smartphones",
+      "content": "A message claims all residents will receive free smartphones from the government. Officials have confirmed this is completely false.",
+      "status": "FAKE",
+      "reporter": "Ashley Cooper",
+      "reportedAt": "2025-07-07T17:00:00Z",
+      "imageUrl": "https://picsum.photos/id/136/800/400",
+      "stats": { "fake": 31, "notFake": 7 }
+    },
+    {
+      "id": 36,
+      "title": "Local Charity Breaks Fundraising Record",
+      "content": "Local charity 'Help for All' has broken their annual fundraising record, raising $2.3 million to support homeless families and children.",
+      "status": "NOT_FAKE",
+      "reporter": "Thomas Baker",
+      "reportedAt": "2025-07-06T11:45:00Z",
+      "imageUrl": "https://picsum.photos/id/137/800/400",
+      "stats": { "fake": 0, "notFake": 33 }
+    },
+    {
+      "id": 37,
+      "title": "Fake News About Alien Contact",
+      "content": "Social media posts claim government officials have made contact with aliens. Government spokespersons have denied all such claims.",
+      "status": "FAKE",
+      "reporter": "Victoria Lewis",
+      "reportedAt": "2025-07-05T19:20:00Z",
+      "imageUrl": "https://picsum.photos/id/138/800/400",
+      "stats": { "fake": 48, "notFake": 5 }
+    },
+    {
+      "id": 38,
+      "title": "New Electric Vehicle Charging Network",
+      "content": "The city has installed 100 new electric vehicle charging stations across the metropolitan area, supporting the growing number of EV owners.",
+      "status": "NOT_FAKE",
+      "reporter": "Nathan Roberts",
+      "reportedAt": "2025-07-04T09:30:00Z",
+      "imageUrl": "https://picsum.photos/id/139/800/400",
+      "stats": { "fake": 1, "notFake": 25 }
+    },
+    {
+      "id": 39,
+      "title": "Viral Post Claims Miracle Cure Discovery",
+      "content": "A viral post claims scientists have discovered a miracle cure for all diseases. Medical experts have debunked this as completely false.",
+      "status": "FAKE",
+      "reporter": "Olivia Martinez",
+      "reportedAt": "2025-07-03T15:10:00Z",
+      "imageUrl": "https://picsum.photos/id/140/800/400",
+      "stats": { "fake": 39, "notFake": 8 }
+    },
+    {
+      "id": 40,
+      "title": "New Urban Farm Project Launches",
+      "content": "An urban farm project has launched in the city center, growing fresh vegetables on rooftops and providing jobs for local residents.",
+      "status": "NOT_FAKE",
+      "reporter": "Patrick Sullivan",
+      "reportedAt": "2025-07-02T12:25:00Z",
+      "imageUrl": "https://picsum.photos/id/141/800/400",
+      "stats": { "fake": 0, "notFake": 20 }
     }
   ]  
 }
