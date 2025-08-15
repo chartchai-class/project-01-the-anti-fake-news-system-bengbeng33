@@ -20,14 +20,18 @@
     </div>
     <div class="px-4 sm:px-6 lg:px-8 py-6">
       <NewsBoxes :items="paginatedNews" />
+      <div class="mt-6 flex justify-center">
+        <PageNav v-model="currentPage" :total="totalPages" />
+      </div>
     </div>
   </div>
 </template>
 
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import NewsBoxes from '@/components/NewsBoxes.vue'
+import PageNav from '@/components/PageNav.vue'
 import data from '@/data/db.json'
 
 interface NewsItem {
@@ -54,7 +58,25 @@ const allNews = computed((): NewsItem[] => {
   return (data as { news: NewsItem[] }).news
 })
 
+const currentPage = ref(1)
+
+const totalPages = computed(() => {
+  const total = allNews.value.length
+  return total > 0 ? Math.ceil(total / props.itemsPerPage) : 0
+})
+
+watch([() => props.itemsPerPage, allNews], () => {
+  if (totalPages.value === 0) {
+    currentPage.value = 1
+    return
+  }
+  if (currentPage.value > totalPages.value) currentPage.value = totalPages.value
+  if (currentPage.value < 1) currentPage.value = 1
+})
+
 const paginatedNews = computed((): NewsItem[] => {
-  return allNews.value.slice(0, props.itemsPerPage)
+  if (totalPages.value === 0) return []
+  const start = (currentPage.value - 1) * props.itemsPerPage
+  return allNews.value.slice(start, start + props.itemsPerPage)
 })
 </script>
