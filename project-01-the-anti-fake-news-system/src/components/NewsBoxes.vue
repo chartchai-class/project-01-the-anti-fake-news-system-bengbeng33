@@ -3,34 +3,36 @@
 
         <div
             class="grid grid-cols-2 md:grid-cols-3 gap-x-32 gap-y-12 mx-auto max-w-[684px] md:max-w-[1038px] justify-items-center">
-            <article v-for="n in items" :key="n.id" class="rounded-2xl bg-white overflow-hidden"
-                :style="{ height: '290px', width: '330px' }">
-                <img :src="n.imageUrl" alt="" class="h-24 w-full object-cover" />
+            <article v-for="n in items" :key="n.id" class="rounded-2xl"
+                :style="{ background: '#cecece', height: '290px', width: '330px' }">
 
-                <div class="p-3 flex flex-col h-[calc(100%-6rem)] justify-between">
+                <div class="relative px-4 pt-3 pb-2 rounded-t-2xl"
+                    style="background: #ffff; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15); border-bottom: 3px;">
                     <!-- Title center -->
-                    <div class="flex flex-col items-center">
-                        <h3 class="text-sm font-semibold line-clamp-1 text-center w-full">
+                    <div class="flex flex-col items-center bl">
+                        <h3 class="text-[22px] font-bold line-clamp text-center w-full">
                             {{ n.title }}
                         </h3>
 
                         <div class="w-full flex justify-end mt-1">
-                            <span class="text-[11px] text-gray-500 truncate text-right">{{ "by " + n.reporter }}</span>
+                            <span class="text-[16px] text-gray truncate text-right">{{ "by " + n.reporter }}</span>
                         </div>
                     </div>
+                </div>
 
+                <div class="p-3 flex flex-col justify-between h-14 pb-12">
                     <!-- Summary (optional: keep or move as needed) -->
-                    <p class="text-xs text-gray-600 line-clamp-2 mt-1">
+                    <p class="text-[18px] text-gray-600 line-clamp mt-1">
                         {{ n.summary }}
                     </p>
 
                     <!-- reportedAt left-bottom + badge right -->
-                    <div class="flex flex-col flex-1 justify-between mt-2">
+                    <div class="flex flex-1 flex-col justify-end mt-2">
                         <div class="flex justify-between items-end mt-auto">
-                            <time :datetime="n.reportedAt" class="text-[11px] text-gray-500">
+                            <time :datetime="n.reportedAt" class="text-[px] text-gray-500">
                                 {{ formatDate(n.reportedAt) }}
                             </time>
-                            <span class="text-[10px] px-2 py-0.5 rounded-full border whitespace-nowrap ml-auto"
+                            <span class="text-[16px] px-2 py-0.5 rounded-full border whitespace-nowrap ml-auto"
                                 :class="badgeClass(n.status)">
                                 {{ badgeText(n.status) }}
                             </span>
