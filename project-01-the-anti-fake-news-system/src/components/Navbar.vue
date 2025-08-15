@@ -23,43 +23,43 @@
         <!-- Right side: Navigation Links -->
         <div class="flex space-x-4">
           <!-- All News -->
-          <button 
-            @click="setActiveFilter('all')" 
+          <router-link 
+            to="/"
             :class="[
-              'px-6 py-2 rounded-md text-lg font-medium transition-colors duration-200 w-20',
-              activeFilter === 'all' 
+              'px-6 py-2 rounded-md text-lg font-medium transition-colors duration-200 w-20 text-center',
+              $route.path === '/' 
                 ? 'bg-white text-orange-700' 
                 : 'text-white hover:text-orange-200 hover:bg-orange-600'
             ]"
           >
             All
-          </button>
+          </router-link>
           
           <!-- Fact News -->
-          <button 
-            @click="setActiveFilter('fact')" 
+          <router-link 
+            to="/fact"
             :class="[
-              'px-6 py-2 rounded-md text-lg font-medium transition-colors duration-200 w-20',
-              activeFilter === 'fact' 
+              'px-6 py-2 rounded-md text-lg font-medium transition-colors duration-200 w-20 text-center',
+              $route.path === '/fact' 
                 ? 'bg-white text-green-700' 
                 : 'text-white hover:text-orange-200 hover:bg-orange-600'
             ]"
           >
             Fact
-          </button>
+          </router-link>
           
           <!-- Fake News -->
-          <button 
-            @click="setActiveFilter('fake')" 
+          <router-link 
+            to="/fake"
             :class="[
-              'px-6 py-2 rounded-md text-lg font-medium transition-colors duration-200 w-20',
-              activeFilter === 'fake' 
+              'px-6 py-2 rounded-md text-lg font-medium transition-colors duration-200 w-20 text-center',
+              $route.path === '/fake' 
                 ? 'bg-white text-red-700' 
                 : 'text-white hover:text-orange-200 hover:bg-orange-600'
             ]"
           >
             Fake
-          </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -68,19 +68,7 @@
 
 <script lang="ts">
 export default {
-  name: 'NavBar',
-  data() {
-    return {
-      activeFilter: 'all'
-    }
-  },
-  methods: {
-    setActiveFilter(filter: string) {
-      this.activeFilter = filter
-      // Emit event to parent component to handle news filtering
-      this.$emit('filter-changed', filter)
-    }
-  }
+  name: 'NavBar'
 }
 </script>
 

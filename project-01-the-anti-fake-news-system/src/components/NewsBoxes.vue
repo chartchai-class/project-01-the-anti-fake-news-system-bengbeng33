@@ -1,13 +1,13 @@
 <template>
   <section class="w-full bg-black/95 rounded-2xl p-3 sm:p-4 lg:p-6">
     <div
-      class="grid grid-cols-2 md:grid-cols-3 gap-x-20 gap-y-8 mx-auto max-w-[684px] md:max-w-[1038px] justify-items-center"
+      class="grid grid-cols-2 md:grid-cols-3 gap-x-32 gap-y-12 mx-auto max-w-[684px] md:max-w-[1038px] justify-items-center"
     >
       <article
         v-for="n in items"
         :key="n.id"
         class="rounded-2xl bg-white overflow-hidden"
-        :style="{ height: '240px', width: '350px' }"
+        :style="{ height: '290px', width: '330px' }"
       >
         <img :src="n.imageUrl" alt="" class="h-24 w-full object-cover" />
 
@@ -57,8 +57,10 @@ interface NewsItem {
   stats: { fake: number; notFake: number }
 }
 
-import data from '@/data/db.json'
-const items = (data as { news: NewsItem[] }).news
+// Define props to accept items from parent components
+const props = defineProps<{
+  items: NewsItem[]
+}>()
 
 function badgeText(s: Status) {
   return s === 'FAKE' ? 'Fake' : s === 'NOT_FAKE' ? 'Fact' : 'Unverified'

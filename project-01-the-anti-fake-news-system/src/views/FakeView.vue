@@ -1,8 +1,8 @@
 <template>
   <div class="min-h-screen bg-black">
     <div class="px-4 sm:px-6 lg:px-8 py-6">
-      <h1 class="text-3xl font-bold text-white mb-6">All News</h1>
-      <NewsBoxes :items="allNews" />
+      <h1 class="text-3xl font-bold text-white mb-6">Fake News</h1>
+      <NewsBoxes :items="fakeNews" />
     </div>
   </div>
 </template>
@@ -24,13 +24,15 @@ interface NewsItem {
 }
 
 export default {
-  name: 'HomeView',
+  name: 'FakeView',
   components: {
     NewsBoxes
   },
   computed: {
-    allNews(): NewsItem[] {
-      return (data as { news: NewsItem[] }).news
+    fakeNews(): NewsItem[] {
+      return (data as { news: NewsItem[] }).news.filter(
+        (item: NewsItem) => item.status === 'FAKE'
+      )
     }
   }
 }
