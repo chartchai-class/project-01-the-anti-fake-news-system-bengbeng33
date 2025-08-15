@@ -9,8 +9,6 @@
                 :style="{ background: '#cecece', height: '290px', width: '330px' }"
                 @click="goToNewsDetail(n.id)"
             >
-                <img :src="n.imageUrl" alt="" class="h-24 w-full object-cover" />
-
                 <div class="relative px-4 pt-3 pb-2 rounded-t-2xl"
                     style="background: #ffff; box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15); border-bottom: 3px;">
                     <!-- Title center -->
