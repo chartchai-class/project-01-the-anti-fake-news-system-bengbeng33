@@ -1,10 +1,14 @@
 <template>
     <section class="w-full bg-black/95 rounded-2xl p-3 sm:p-4 lg:p-6">
-
         <div
             class="grid grid-cols-2 md:grid-cols-3 gap-x-32 gap-y-12 mx-auto max-w-[684px] md:max-w-[1038px] justify-items-center">
-            <article v-for="n in items" :key="n.id" class="rounded-2xl bg-white overflow-hidden"
-                :style="{ height: '290px', width: '330px' }">
+            <article 
+                v-for="n in items" 
+                :key="n.id" 
+                class="rounded-2xl bg-white overflow-hidden cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-200"
+                :style="{ height: '290px', width: '330px' }"
+                @click="goToNewsDetail(n.id)"
+            >
                 <img :src="n.imageUrl" alt="" class="h-24 w-full object-cover" />
 
                 <div class="p-3 flex flex-col h-[calc(100%-6rem)] justify-between">
@@ -43,6 +47,8 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
 type Status = 'FAKE' | 'NOT_FAKE' | null
 
 interface NewsItem {
@@ -57,10 +63,16 @@ interface NewsItem {
     stats: { fake: number; notFake: number }
 }
 
-// Define props to accept items from parent components
-const props = defineProps<{
+// Define props without variable assignment
+defineProps<{
     items: NewsItem[]
 }>()
+
+const router = useRouter()
+
+function goToNewsDetail(newsId: number) {
+    router.push(`/news/${newsId}`)
+}
 
 function badgeText(s: Status) {
     return s === 'FAKE' ? 'Fake' : s === 'NOT_FAKE' ? 'Fact' : 'Unverified'
