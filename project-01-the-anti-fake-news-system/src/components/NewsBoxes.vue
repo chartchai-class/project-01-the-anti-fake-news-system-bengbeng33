@@ -26,7 +26,7 @@
 
                 <div class="p-3 flex flex-col justify-between h-14 pb-12">
                     <p class="text-[18px] text-gray-600 line-clamp mt-1">
-                        {{ n.summary }}
+                        {{ n.content }}
                     </p>
                 </div>
 
@@ -44,7 +44,7 @@
                     <img
                         :src="getStatusImage(n.status)"
                         alt="status"
-                        class="absolute right-1 bottom-3 object-contain z-10 w-[120px] h-[120px]"
+                        class="absolute right-1 bottom-3 object-contain z-10 w-[120px] h-[120px] max-w-full"
                     />
                 </div>
             </article>

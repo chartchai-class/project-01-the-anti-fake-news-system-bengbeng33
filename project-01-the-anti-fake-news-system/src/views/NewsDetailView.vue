@@ -46,8 +46,7 @@
             v-if="newsItem.imageUrl"
             :src="newsItem.imageUrl"
             :alt="newsItem.title"
-            class="w-full h-64 object-cover rounded-lg mt-4"
-          />
+            class="max-w-none h-auto object-scale-down rounded-lg mt-4"          />
 
         </div>
 
