@@ -1,5 +1,6 @@
 <template>
   <section class="w-full bg-black/95 rounded-2xl p-3 sm:p-4 lg:p-6">
+
     <div
       class="grid grid-cols-2 md:grid-cols-3 gap-x-32 gap-y-12 mx-auto max-w-[684px] md:max-w-[1038px] justify-items-center"
     >
@@ -16,13 +17,6 @@
             <h3 class="text-sm font-semibold line-clamp-1">
               {{ n.title }}
             </h3>
-
-            <span
-              class="text-[10px] px-2 py-0.5 rounded-full border whitespace-nowrap"
-              :class="badgeClass(n.status)"
-            >
-              {{ badgeText(n.status) }}
-            </span>
           </div>
 
           <p class="text-xs text-gray-600 line-clamp-2 mt-1">
@@ -36,6 +30,14 @@
               {{ formatDate(n.reportedAt) }}
             </time>
           </div>
+
+          <span
+              class="text-[10px] px-2 py-0.5 rounded-full border whitespace-nowrap"
+              :class="badgeClass(n.status)"
+            >
+              {{ badgeText(n.status) }}
+            </span>
+            
         </div>
       </article>
     </div>

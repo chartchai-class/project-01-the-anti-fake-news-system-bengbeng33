@@ -1,11 +1,29 @@
 <template>
   <div class="min-h-screen bg-black">
+    <div class="flex justify-center">
+      <div class="relative inline-block -mt-2 mb-6">
+        <img
+          src="/H.png"
+          alt="Daybreak banner"
+          class="w-[520px] max-w-full h-auto pointer-events-none select-none"
+        />
+        <h1
+          class="absolute inset-0 grid place-items-center z-10 pointer-events-none"
+        >
+          <span
+            class="px-4 py-1 rounded-xl text-Black text-3xl sm:text-4xl font-bold tracking-wide backdrop-blur-[1px]"
+          >
+            All News
+          </span>
+        </h1>
+      </div>
+    </div>
     <div class="px-4 sm:px-6 lg:px-8 py-6">
-      <h1 class="text-3xl font-bold text-white mb-6">All News</h1>
       <NewsBoxes :items="allNews" />
     </div>
   </div>
 </template>
+
 
 <script lang="ts">
 import NewsBoxes from '@/components/NewsBoxes.vue'
