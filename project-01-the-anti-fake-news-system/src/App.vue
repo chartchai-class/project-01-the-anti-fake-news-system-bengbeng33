@@ -1,17 +1,20 @@
 <template>
   <div class="min-h-screen bg-black">
-    <Navbar />
-    <router-view />
+    <Navbar 
+      :items-per-page="itemsPerPage"
+      @update:items-per-page="updateItemsPerPage"
+    />
+    <router-view :items-per-page="itemsPerPage" />
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { ref } from 'vue'
 import Navbar from '@/components/Navbar.vue'
 
-export default {
-  name: 'App',
-  components: {
-    Navbar
-  }
+const itemsPerPage = ref(6)
+
+function updateItemsPerPage(value: number) {
+  itemsPerPage.value = value
 }
 </script>

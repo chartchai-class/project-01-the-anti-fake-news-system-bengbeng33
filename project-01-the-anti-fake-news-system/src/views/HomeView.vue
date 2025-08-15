@@ -19,13 +19,14 @@
       </div>
     </div>
     <div class="px-4 sm:px-6 lg:px-8 py-6">
-      <NewsBoxes :items="allNews" />
+      <NewsBoxes :items="paginatedNews" />
     </div>
   </div>
 </template>
 
 
-<script lang="ts">
+<script setup lang="ts">
+import { computed } from 'vue'
 import NewsBoxes from '@/components/NewsBoxes.vue'
 import data from '@/data/db.json'
 
@@ -41,15 +42,19 @@ interface NewsItem {
   stats: { fake: number; notFake: number }
 }
 
-export default {
-  name: 'HomeView',
-  components: {
-    NewsBoxes
-  },
-  computed: {
-    allNews(): NewsItem[] {
-      return (data as { news: NewsItem[] }).news
-    }
-  }
+interface Props {
+  itemsPerPage?: number
 }
+
+const props = withDefaults(defineProps<Props>(), {
+  itemsPerPage: 6
+})
+
+const allNews = computed((): NewsItem[] => {
+  return (data as { news: NewsItem[] }).news
+})
+
+const paginatedNews = computed((): NewsItem[] => {
+  return allNews.value.slice(0, props.itemsPerPage)
+})
 </script>
