@@ -1,5 +1,15 @@
 <template>
   <div class="min-h-screen ">
+    <!-- Loading Progress Bar -->
+    <div v-if="loading" class="fixed top-0 left-0 right-0 z-50">
+      <div class="h-1 bg-green-200">
+        <div 
+          class="h-full bg-green-500 transition-all duration-300 ease-out"
+          :style="{ width: loadingProgress + '%' }"
+        ></div>
+      </div>
+    </div>
+
     <div class="flex justify-center">
       <div class="relative inline-block -mt-2 mb-6">
         <img
@@ -27,12 +37,11 @@
   </div>
 </template>
 
-
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, onMounted } from 'vue'
 import NewsBoxes from '@/components/NewsBoxes.vue'
 import PageNav from '@/components/PageNav.vue'
-import data from '@/data/db.json'
+import { useNewsStore } from '@/stores/news'
 
 interface NewsItem {
   id: number
@@ -54,8 +63,36 @@ const props = withDefaults(defineProps<Props>(), {
   itemsPerPage: 6
 })
 
+const newsStore = useNewsStore()
+
+// Loading states
+const loading = ref(false)
+const loadingProgress = ref(0)
+
+// Simulate loading when component mounts
+onMounted(() => {
+  simulateLoading()
+})
+
+function simulateLoading() {
+  loading.value = true
+  loadingProgress.value = 0
+  
+  const interval = setInterval(() => {
+    loadingProgress.value += Math.random() * 30
+    if (loadingProgress.value >= 100) {
+      loadingProgress.value = 100
+      setTimeout(() => {
+        loading.value = false
+        loadingProgress.value = 0
+      }, 200)
+      clearInterval(interval)
+    }
+  }, 80)
+}
+
 const factNews = computed((): NewsItem[] => {
-  return (data as { news: NewsItem[] }).news.filter(
+  return newsStore.getAllNews.filter(
     (item: NewsItem) => item.status === 'NOT_FAKE'
   )
 })

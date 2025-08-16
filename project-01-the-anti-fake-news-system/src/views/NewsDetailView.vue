@@ -1,5 +1,15 @@
 <template>
   <div class="min-h-screen ">
+    <!-- Loading Progress Bar -->
+    <div v-if="loading" class="fixed top-0 left-0 right-0 z-50">
+      <div class="h-1 bg-blue-200">
+        <div 
+          class="h-full bg-blue-500 transition-all duration-300 ease-out"
+          :style="{ width: loadingProgress + '%' }"
+        ></div>
+      </div>
+    </div>
+
     <div class="flex justify-center">
       <div class="relative inline-block -mt-2 mb-6">
         <img
@@ -86,7 +96,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useNewsStore } from '../stores/news'
 
@@ -99,6 +109,32 @@ interface Props {
 const props = defineProps<Props>()
 const route = useRoute()
 const newsStore = useNewsStore()
+
+// Loading states
+const loading = ref(false)
+const loadingProgress = ref(0)
+
+// Simulate loading when component mounts
+onMounted(() => {
+  simulateLoading()
+})
+
+function simulateLoading() {
+  loading.value = true
+  loadingProgress.value = 0
+  
+  const interval = setInterval(() => {
+    loadingProgress.value += Math.random() * 35
+    if (loadingProgress.value >= 100) {
+      loadingProgress.value = 100
+      setTimeout(() => {
+        loading.value = false
+        loadingProgress.value = 0
+      }, 200)
+      clearInterval(interval)
+    }
+  }, 70)
+}
 
 // Get news ID
 const newsId = computed(() => props.id || route.params.id as string)

@@ -29,10 +29,30 @@ interface CommentData {
   user?: string
 }
 
+interface NewNewsData {
+  title: string
+  content: string
+  reporter: string
+  imageUrl?: string
+  status?: Status
+}
+
+interface NewNewsWithVotesData {
+  title: string
+  content: string
+  reporter: string
+  imageUrl?: string
+  status?: Status
+  initialVotes?: {
+    fake: number
+    notFake: number
+  }
+}
+
 export const useNewsStore = defineStore('news', {
   state: () => ({
-    // All news data from db.json
-    allNews: data.news as NewsItem[],
+    // All news data from db.json + session added news
+    allNews: [...data.news] as NewsItem[],
     
     // Session-based voting data (resets on app restart)
     sessionVotes: new Map<number, { fake: number; notFake: number }>(),
@@ -40,6 +60,12 @@ export const useNewsStore = defineStore('news', {
     
     // Comments data (session-based)
     newsComments: new Map<number, Comment[]>(),
+    
+    // Session added news (temporary)
+    sessionNews: [] as NewsItem[],
+    
+    // Next ID for new news items
+    nextNewsId: Math.max(...data.news.map(n => n.id)) + 1,
     
     // Default mock comments for each news
     defaultComments: [
@@ -60,15 +86,22 @@ export const useNewsStore = defineStore('news', {
   }),
 
   getters: {
+    // Get all news (original + session added)
+    getAllNews: (state): NewsItem[] => {
+      return [...state.allNews, ...state.sessionNews]
+    },
+
     // Get news by ID
     getNewsById: (state) => (id: string | number): NewsItem | undefined => {
-      return state.allNews.find(news => news.id === parseInt(id.toString()))
+      const allNews = [...state.allNews, ...state.sessionNews]
+      return allNews.find(news => news.id === parseInt(id.toString()))
     },
 
     // Get current vote counts for a news item
     getVoteCounts: (state) => (newsId: string | number): { fake: number; notFake: number } => {
       const id = parseInt(newsId.toString())
-      const originalNews = state.allNews.find(news => news.id === id)
+      const allNews = [...state.allNews, ...state.sessionNews]
+      const originalNews = allNews.find(news => news.id === id)
       const sessionVote = state.sessionVotes.get(id)
       
       if (sessionVote) {
@@ -96,7 +129,8 @@ export const useNewsStore = defineStore('news', {
     getCurrentStatus: (state) => (newsId: string | number): Status => {
       const id = parseInt(newsId.toString())
       const voteCounts = state.sessionVotes.get(id)
-      const originalNews = state.allNews.find(news => news.id === id)
+      const allNews = [...state.allNews, ...state.sessionNews]
+      const originalNews = allNews.find(news => news.id === id)
       
       if (voteCounts) {
         if (voteCounts.fake > voteCounts.notFake) return 'FAKE'
@@ -108,13 +142,15 @@ export const useNewsStore = defineStore('news', {
 
     // Filter news by status
     getNewsByStatus: (state) => (status: string): NewsItem[] => {
-      if (status === 'all') return state.allNews
-      return state.allNews.filter(news => news.status === status)
+      const allNews = [...state.allNews, ...state.sessionNews]
+      if (status === 'all') return allNews
+      return allNews.filter(news => news.status === status)
     },
 
     // Get news with updated vote counts
     getNewsWithCurrentVotes: (state) => (): NewsItem[] => {
-      return state.allNews.map(news => {
+      const allNews = [...state.allNews, ...state.sessionNews]
+      return allNews.map(news => {
         const sessionVote = state.sessionVotes.get(news.id)
         return {
           ...news,
@@ -129,6 +165,45 @@ export const useNewsStore = defineStore('news', {
   },
 
   actions: {
+    // Add new news item (session-based) - Original method
+    addNews(newsData: NewNewsData): NewsItem {
+      const newNewsItem: NewsItem = {
+        id: this.nextNewsId++,
+        title: newsData.title,
+        summary: newsData.content.length > 100 ? newsData.content.substring(0, 100) + '...' : newsData.content,
+        content: newsData.content,
+        status: newsData.status || null,
+        reporter: newsData.reporter,
+        reportedAt: new Date().toISOString(),
+        imageUrl: newsData.imageUrl || `https://picsum.photos/id/${Math.floor(Math.random() * 200) + 100}/800/400`,
+        stats: { fake: 0, notFake: 0 }
+      }
+
+      this.sessionNews.unshift(newNewsItem) // Add to beginning of array
+      return newNewsItem
+    },
+
+    // Add new news item with initial votes (session-based) - New method
+    addNewsWithVotes(newsData: NewNewsWithVotesData): NewsItem {
+      const newNewsItem: NewsItem = {
+        id: this.nextNewsId++,
+        title: newsData.title,
+        summary: newsData.content.length > 100 ? newsData.content.substring(0, 100) + '...' : newsData.content,
+        content: newsData.content,
+        status: newsData.status || null,
+        reporter: newsData.reporter,
+        reportedAt: new Date().toISOString(),
+        imageUrl: newsData.imageUrl || `https://picsum.photos/id/${Math.floor(Math.random() * 200) + 100}/800/400`,
+        stats: {
+          fake: newsData.initialVotes?.fake || 0,
+          notFake: newsData.initialVotes?.notFake || 0
+        }
+      }
+
+      this.sessionNews.unshift(newNewsItem) // Add to beginning of array
+      return newNewsItem
+    },
+
     // Vote on a news item
     voteOnNews(newsId: string | number, voteType: Status): boolean {
       const id = parseInt(newsId.toString())
@@ -142,7 +217,8 @@ export const useNewsStore = defineStore('news', {
       // Get current vote counts
       let currentVotes = this.sessionVotes.get(id)
       if (!currentVotes) {
-        const originalNews = this.allNews.find(news => news.id === id)
+        const allNews = [...this.allNews, ...this.sessionNews]
+        const originalNews = allNews.find(news => news.id === id)
         currentVotes = originalNews ? { ...originalNews.stats } : { fake: 0, notFake: 0 }
       }
 
@@ -189,6 +265,8 @@ export const useNewsStore = defineStore('news', {
       this.sessionVotes.clear()
       this.userVotes.clear()
       this.newsComments.clear()
+      this.sessionNews = []
+      this.nextNewsId = Math.max(...data.news.map(n => n.id)) + 1
     },
 
     // Initialize comments for a news item if not exists
