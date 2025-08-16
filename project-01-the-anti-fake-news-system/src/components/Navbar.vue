@@ -64,8 +64,9 @@
             </router-link>
           </div>
 
-          <!-- Pagination Control -->
+          <!-- Pagination Control - Only show on home page and fact/fake pages -->
           <PaginationControl 
+            v-if="$route.path === '/' || $route.path === '/fact' || $route.path === '/fake'"
             v-model="localItemsPerPage"
             @update:modelValue="updateItemsPerPage"
           />

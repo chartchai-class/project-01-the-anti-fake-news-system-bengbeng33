@@ -37,7 +37,7 @@
                         
                         <!-- Status image -->
                         <img
-                            :src="getStatusImage(n.status)"
+                            :src="getStatusImage(n.currentStatus || n.status)"
                             alt="status"
                             class="w-[120px] h-[120px] object-contain"
                         />
@@ -60,6 +60,7 @@ interface NewsItem {
     summary: string
     content: string
     status: Status
+    currentStatus?: Status
     reporter: string
     reportedAt: string
     imageUrl: string
