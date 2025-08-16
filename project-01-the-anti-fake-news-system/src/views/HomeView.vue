@@ -137,6 +137,7 @@ interface NewsItem {
   summary: string
   content: string
   status: 'FAKE' | 'NOT_FAKE' | null
+  currentStatus?: 'FAKE' | 'NOT_FAKE' | null
   reporter: string
   reportedAt: string
   imageUrl: string
@@ -189,7 +190,7 @@ function simulateLoading() {
 }
 
 const allNews = computed((): NewsItem[] => {
-  return newsStore.getAllNews
+  return newsStore.getNewsWithCurrentVotes()
 })
 
 const currentPage = ref(1)

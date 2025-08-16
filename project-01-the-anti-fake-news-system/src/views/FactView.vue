@@ -49,6 +49,7 @@ interface NewsItem {
   summary: string
   content: string
   status: 'FAKE' | 'NOT_FAKE' | null
+  currentStatus?: 'FAKE' | 'NOT_FAKE' | null
   reporter: string
   reportedAt: string
   imageUrl: string
@@ -92,8 +93,8 @@ function simulateLoading() {
 }
 
 const factNews = computed((): NewsItem[] => {
-  return newsStore.getAllNews.filter(
-    (item: NewsItem) => item.status === 'NOT_FAKE'
+  return newsStore.getNewsWithCurrentVotes().filter(
+    (item: NewsItem) => (item.currentStatus || item.status) === 'NOT_FAKE'
   )
 })
 
