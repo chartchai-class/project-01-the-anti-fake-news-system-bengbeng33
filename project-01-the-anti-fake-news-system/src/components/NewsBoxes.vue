@@ -9,7 +9,7 @@
                 @click="goToNewsDetail(n.id)"
             >
                 <div
-                    class="relative px-4 pt-3 pb-2 rounded-t-2xl bg-white shadow-[0_2px_8px_0_rgba(0,0,0,0.15)] border-b-[3px]"
+                    class="relative px-4 pt-3 pb-2 rounded-t-2xl bg-white shadow-[0_2px_8px_0_rgba(0,0,0,0.15)] border-b-[3px] h-[100px] flex flex-col justify-center"
                 >
                     <!-- Title center -->
                     <div class="flex flex-col items-center bl">
@@ -24,28 +24,24 @@
                     </div>
                 </div>
 
-                <div class="p-3 flex flex-col justify-between h-14 pb-12">
-                    <p class="text-[18px] text-gray-600 line-clamp mt-1">
+                <div class="relative p-3 pb-28 flex flex-col justify-between flex-1 select-none">
+                    <p class="text-[18px] text-gray-600 line-clamp-2 mt-1 overflow-hidden leading-relaxed flex-1">
                         {{ n.content }}
                     </p>
-                </div>
-
-                <!-- reportedAt left-bottom -->
-                <div class="flex flex-1 flex-col justify-end mt-20 px-4">
-                    <div class="flex justify-between items-end mt-auto">
-                        <time :datetime="n.reportedAt" class="text-[px] text-gray-500">
+                    
+                    <!-- Bottom row with date and status image - absolutely positioned -->
+                    <div class="absolute bottom-0 left-3 right-3 flex justify-between items-end">
+                        <time :datetime="n.reportedAt" class="text-[14px] text-gray-500 pb-1">
                             {{ formatDate(n.reportedAt) }}
                         </time>
+                        
+                        <!-- Status image -->
+                        <img
+                            :src="getStatusImage(n.status)"
+                            alt="status"
+                            class="w-[120px] h-[120px] object-contain"
+                        />
                     </div>
-                </div>
-
-                <div class="flex flex-col justify-between pb-6 relative">
-                    <!-- Status image overlay -->
-                    <img
-                        :src="getStatusImage(n.status)"
-                        alt="status"
-                        class="absolute right-1 bottom-3 object-contain z-10 w-[120px] h-[120px] max-w-full"
-                    />
                 </div>
             </article>
         </div>
