@@ -20,3 +20,45 @@ nav a {
   text-decoration: none;
   color: blue;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('https://cdn.dribbble.com/userupload/6898071/file/original-d6eee2f84315fca58967df52e2fed047.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* Fallback background color */
+  background-color: #141414;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+@layer utilities {
+  .bg-gif-fire {
+    background-image: url('https://cdn.dribbble.com/userupload/6898071/file/original-d6eee2f84315fca58967df52e2fed047.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .bg-gif-space {
+    background-image: url('https://media.giphy.com/media/3o7TKOBl0FQj0nGjJK/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
