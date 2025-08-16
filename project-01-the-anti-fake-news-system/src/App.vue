@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen bg-black">
-    <Navbar 
+  <div class="min-h-screen">
+    <AppNavigation 
       :items-per-page="itemsPerPage"
       @update:items-per-page="updateItemsPerPage"
     />
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import Navbar from '@/components/Navbar.vue'
+import AppNavigation from '@/components/Navbar.vue'
 
 const itemsPerPage = ref(6)
 
