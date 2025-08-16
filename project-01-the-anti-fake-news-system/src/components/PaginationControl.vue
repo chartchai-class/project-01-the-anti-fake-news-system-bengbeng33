@@ -20,7 +20,7 @@
     <!-- Dropdown Menu -->
     <div
       v-if="isOpen"
-      class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-orange-200 z-50"
+      class="absolute right-0 sm:right-0 -right-8 mt-2 w-48 bg-white rounded-lg shadow-lg border border-orange-200 z-50"
     >
       <div class="py-1">
         <button

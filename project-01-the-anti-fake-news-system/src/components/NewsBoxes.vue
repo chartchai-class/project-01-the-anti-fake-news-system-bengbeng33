@@ -1,7 +1,7 @@
 <template>
     <section class="w-full rounded-2xl p-3 sm:p-4 lg:p-6">
         <div
-            class="grid grid-cols-2 md:grid-cols-3 gap-x-32 gap-y-12 mx-auto max-w-[684px] md:max-w-[1038px] justify-items-center">
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 sm:gap-x-32 gap-y-12 mx-auto max-w-[330px] sm:max-w-[684px] md:max-w-[1038px] justify-items-center">
             <article
                 v-for="n in items"
                 :key="n.id"
