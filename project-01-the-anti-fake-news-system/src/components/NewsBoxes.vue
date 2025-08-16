@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full bg-black/95 rounded-2xl p-3 sm:p-4 lg:p-6">
+    <section class="w-full rounded-2xl p-3 sm:p-4 lg:p-6">
         <div
             class="grid grid-cols-2 md:grid-cols-3 gap-x-32 gap-y-12 mx-auto max-w-[684px] md:max-w-[1038px] justify-items-center">
             <article

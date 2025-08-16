@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-black">
+  <div class="min-h-screen">
     <div class="flex justify-center">
       <div class="relative inline-block -mt-2 mb-6">
         <img
