@@ -80,7 +80,7 @@ function goToNewsDetail(newsId: number) {
 function getStatusImage(s: Status) {
     if (s === 'FAKE') return '/Fake.png'
     if (s === 'NOT_FAKE') return '/Fact.png'
-    return '/Equal2.png'
+    return '/Equal.png'
 }
 
 function formatDate(iso: string) {
