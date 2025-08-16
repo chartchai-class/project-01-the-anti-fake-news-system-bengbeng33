@@ -112,7 +112,7 @@
           <div
             v-for="comment in comments"
             :key="comment.id"
-            class="bg-gray-100 rounded-lg p-4"
+            class="bg-gray-200 rounded-lg p-4"
           >
             <!-- Username -->
             <div class="font-medium text-gray-900 mb-2">{{ comment.user }}</div>
@@ -122,7 +122,7 @@
               v-if="comment.imageUrl"
               :src="comment.imageUrl"
               :alt="`Image by ${comment.user}`"
-              class="w-full h-48 object-cover rounded-lg mb-3"
+              class="h-48 object-contain rounded-lg mb-3"
             />
             
             <!-- Comment Text -->
