@@ -93,7 +93,7 @@ function simulateLoading() {
 
 const fakeNews = computed((): NewsItem[] => {
   return newsStore.getAllNews.filter(
-    (item: NewsItem) => item.status === 'NOT_FAKE'
+    (item: NewsItem) => item.status === 'FAKE'
   )
 })
 
