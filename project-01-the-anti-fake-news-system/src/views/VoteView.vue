@@ -45,8 +45,12 @@
           <!-- Left Side - Fact Vote -->
           <div class="flex flex-col items-center">
             <h3 class="text-xl font-bold text-gray-900 mb-4">Score: {{ voteCounts.notFake }}</h3>
-            <div class="w-48 h-48 rounded-full flex items-center justify-center mb-6 border-4 bg-green-100 border-green-300">
-              <span class="text-3xl font-extrabold tracking-wide text-green-700">FACT</span>
+            <div class="flex items-center justify-center mb-6">
+              <img
+                src="/Fact.png"
+                alt="FACT"
+                class="w-48 h-48 object-contain"
+              />
             </div>
             <button
               @click="vote('NOT_FAKE')"
@@ -60,8 +64,12 @@
           <!-- Right Side - Fake Vote -->
           <div class="flex flex-col items-center">
             <h3 class="text-xl font-bold text-gray-900 mb-4">Score: {{ voteCounts.fake }}</h3>
-            <div class="w-48 h-48 rounded-full flex items-center justify-center mb-6 border-4 bg-red-100 border-red-300">
-              <span class="text-3xl font-extrabold tracking-wide text-red-700">FAKE</span>
+            <div class="flex items-center justify-center mb-6">
+              <img
+                src="/Fake.png"
+                alt="FAKE"
+                class="w-48 h-48 object-contain"
+              />
             </div>
             <button
               @click="vote('FAKE')"

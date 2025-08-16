@@ -63,11 +63,12 @@
         <!-- Right side -->
         <div class="flex flex-col items-center mt-10">
           <h2 class="text-2xl font-bold text-gray-900">Current Status</h2>
-          <div
-            class="w-48 h-48 rounded-full flex items-center justify-center mt-4 border-4"
-            :class="currentStatusClass"
-          >
-            <span class="text-3xl font-extrabold tracking-wide">{{ currentStatusText }}</span>
+          <div class="flex items-center justify-center mt-4">
+            <img
+              :src="currentStatusImage"
+              :alt="currentStatusText"
+              class="w-48 h-48 object-contain"
+            />
           </div>
           <router-link
             :to="{ name: 'vote', params: { id: newsId } }"
@@ -159,6 +160,14 @@ const currentStatusClass = computed(() => {
     case 'FAKE': return 'bg-red-100 border-red-300 text-red-700'
     case 'NOT_FAKE': return 'bg-green-100 border-green-300 text-green-700'
     default: return 'bg-gray-100 border-gray-300 text-gray-700'
+  }
+})
+
+const currentStatusImage = computed(() => {
+  switch (currentStatus.value) {
+    case 'FAKE': return '/Fake.png'
+    case 'NOT_FAKE': return '/Fact.png'
+    default: return '/Equal.png'
   }
 })
 
