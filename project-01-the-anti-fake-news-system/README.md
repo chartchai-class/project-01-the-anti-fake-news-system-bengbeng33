@@ -1,68 +1,192 @@
-# project-01-the-anti-fake-news-system
+# Social Anti-Fake News System
 
-This template should help get you started developing with Vue 3 in Vite.
+## Group Information
+**Group Name:** BengBeng33  
+**Course:** SE331 Component-Based Software Development  
+**Term Project I**
 
-## Features
+### Team Members
+- **Student ID:** 662115005 - Julalak Khamluerit
+- **Student ID:** 662115040 - Ratchanon Danintha  
+- **Student ID:** 662115047 - Watcharapong Wanna
 
-### News Management
-- Browse all news articles
-- Filter news by status (Fact, Fake, All)
-- View detailed news information
-- Pagination support
+## Project Overview
 
-### Voting System
-- Vote on news articles as "Fact" or "Fake"
-- Real-time vote counting
-- One vote per user per article (session-based)
-- Visual feedback for voting status
+The Social Anti-Fake News System is a web application that leverages the wisdom of the crowd to combat misinformation. Users can submit news articles, and the community votes on whether the content is fake or factual. The system aggregates these votes to determine the overall status of each news item.
 
-### Comments System
-- Add comments to news articles
-- Support for optional images in comments
-- Username customization
-- Real-time comment display
+### Key Features
+- **Crowdsourced Fact-Checking:** Community-driven verification of news authenticity
+- **Real-time Voting:** Users can vote on news articles as "Fake" or "Fact"
+- **Interactive Comments:** Users can leave comments explaining their reasoning with image attachment
+- **Smart Filtering:** Filter news by status (All, Fake, Fact)
+- **Responsive Design:** Modern UI built with Vue 3 and Tailwind CSS
+
+## Features Implemented
+
+### 🏠 Home Page
+- **News List Display:** Shows all news articles with pagination
+- **Advanced Filtering:** Filter by status (All, Fake, Fact)
+- **Customizable Pagination:** Users can select items per page (3, 6, 9, 12, 15)
+- **News Item Cards:** Each card displays:
+  - News title and short description
+  - Current status (Fake/Fact/Equal)
+  - Reporter's name
+  - Date and time of reporting
+
+### 📰 News Details Page
+- **Complete Information:** Full news topic and detailed content
+- **Status Display:** Current fake/fact determination
+- **Reporter Information:** Name and reporting timestamp
+- **Event Images:** Support for news-related images via URL links
+- **Interactive Features:**
+  - View all comments with pagination
+  - Vote on news authenticity
+  - Add comments with optional image URLs
+  - Real-time comment display
+
+### 🗳️ Voting System
+- **One Vote Per User:** Session-based voting to prevent spam
+- **Real-time Updates:** Vote counts update immediately
+- **Visual Feedback:** Clear indication of voting status
+- **Community Consensus:** News status determined by majority vote
+
+### 💬 Comments System
+- **User Customization:** Custom usernames for comments
+- **Image Support:** Optional image URLs in comments
+- **Pagination:** Efficient comment browsing
+- **Real-time Display:** Comments appear immediately
+
+## Technical Stack
+
+### Frontend
+- **Vue 3** - Progressive JavaScript framework
+- **TypeScript** - Type-safe development
+- **Vue Router** - Client-side routing
+- **Pinia** - State management
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Fast build tool and dev server
+
+### Development Tools
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+- **Vue DevTools** - Development debugging
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable Vue components
+│   ├── LoadingProgress.vue
+│   ├── Navbar.vue
+│   ├── NewsBoxes.vue
+│   ├── PageNav.vue
+│   └── PaginationControl.vue
+├── data/               # Mock data storage
+│   └── db.json
+├── router/             # Vue Router configuration
+│   └── index.ts
+├── stores/             # Pinia state management
+│   ├── counter.ts
+│   └── news.ts
+├── views/              # Page components
+│   ├── CommentsView.vue
+│   ├── FactView.vue
+│   ├── FakeView.vue
+│   ├── HomeView.vue
+│   ├── NewsDetailView.vue
+│   └── VoteView.vue
+├── App.vue             # Root component
+├── main.ts             # Application entry point
+└── style.css           # Global styles
+```
 
 ## Routes
 
-- `/` - Home page with all news
-- `/fact` - Filtered view of fact-checked news
-- `/fake` - Filtered view of fake news
-- `/news/:id` - News detail page
-- `/news/:id/vote` - Voting page for specific news
-- `/news/:id/comments` - Comments page for specific news
+- `/` - Home page with all news and filtering options
+- `/fact` - Filtered view showing only fact-checked news
+- `/fake` - Filtered view showing only fake news
+- `/news/:id` - Detailed news view with full content
+- `/news/:id/vote` - Voting interface for specific news
+- `/news/:id/comments` - Comments section for specific news
 
-## Recommended IDE Setup
+## Mock Data
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+The application includes comprehensive mock data with:
+- **20+ News Articles** - Diverse topics and authenticity levels
+- **Realistic Content** - Varied news scenarios and reporting styles
+- **Vote Statistics** - Pre-populated voting data for demonstration
+- **User Comments** - Sample community feedback and discussions
 
-## Type Support for `.vue` Imports in TS
+## Getting Started
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Prerequisites
+- Node.js (v20.19.0 or >=22.12.0)
+- npm or yarn package manager
 
-## Customize configuration
+### Installation
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/chartchai-class/project-01-the-anti-fake-news-system-bengbeng33.git
+   cd project-01-the-anti-fake-news-system-bengbeng33
+   ```
 
-## Project Setup
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-```sh
-npm install
-```
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-### Compile and Hot-Reload for Development
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
 
-```sh
-npm run dev
-```
+### Available Scripts
 
-### Type-Check, Compile and Minify for Production
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint for code quality
+- `npm run type-check` - TypeScript type checking
 
-```sh
+## Deployment
+
+### Vercel Deployment
+The application is deployed on Vercel for easy access and scalability.
+
+**Live Demo:** ...[will be put here later]...
+
+### Build for Production
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Demo Video
 
-```sh
-npm run lint
-```
+**Demo Video URL:** ...[will be put here later]...
+
+The demo video showcases:
+- Home page functionality and filtering
+- News detail page features
+- Voting system demonstration
+- Comments and interaction features
+- Responsive design across devices
+
+## Key Implementation Details
+
+### State Management
+- Uses Pinia for centralized state management
+- Persistent voting data (session-based)
+- Real-time comment updates
+
+### Data Storage
+- Mock data stored in JSON format
+- No server-side persistence
+- Comments and new votes may disappear on reload as specified
+
+### User Experience
+- Responsive design for multiple screen sizes
+- Loading states and progress indicators
