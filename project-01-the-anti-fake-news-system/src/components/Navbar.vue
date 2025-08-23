@@ -4,11 +4,31 @@
       <div class="flex justify-between items-center h-20">
         <!-- Left side: Logo and Web Text -->
         <div class="flex items-center space-x-4">
-          <!-- Web Logo and Text Container (Dropdown trigger) -->
+          <!-- Web Logo and Text Container -->
           <div class="flex-shrink-0 relative">
+            <!-- Logo and Text for Desktop (Click to go home) -->
+            <router-link 
+              to="/"
+              class="hidden xl:flex items-center space-x-4 focus:outline-none hover:opacity-80 transition-opacity duration-200"
+            >
+              <!-- Logo -->
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/logo.gif" 
+                  alt="Daybreak News Logo" 
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <!-- Web Text -->
+              <div class="text-2xl sm:text-4xl font-bold text-white">
+                Daybreak News
+              </div>
+            </router-link>
+            
+            <!-- Logo and Text for Mobile/Tablet (Dropdown trigger) -->
             <button
               @click="toggleDropdown"
-              class="flex items-center space-x-4 focus:outline-none"
+              class="xl:hidden flex items-center space-x-4 focus:outline-none"
             >
               <!-- Logo -->
               <div class="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
