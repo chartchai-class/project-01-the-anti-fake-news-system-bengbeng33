@@ -23,11 +23,11 @@
                 Daybreak News
               </div>
             </button>
-            <!-- Dropdown menu (mobile only) -->
+            <!-- Dropdown menu (mobile and tablet only) -->
             <transition name="slide">
               <div
                 v-if="dropdownOpen"
-                class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-50 flex flex-col sm:hidden border border-gray-200"
+                class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-50 flex flex-col xl:hidden border border-gray-200"
               >
                 <router-link
                   to="/"
@@ -63,8 +63,8 @@
           </div>
         </div>
 
-        <!-- Right side: Navigation Links and Pagination Control (hidden on mobile) -->
-        <div class="hidden sm:flex items-center space-x-4">
+        <!-- Right side: Navigation Links and Pagination Control (hidden on mobile and tablet) -->
+        <div class="hidden xl:flex items-center space-x-4 xl:space-x-6">
           <!-- Navigation Links -->
           <div class="flex space-x-4">
             <router-link 
