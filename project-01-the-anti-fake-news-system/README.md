@@ -40,7 +40,6 @@ The Social Anti-Fake News System is a web application that leverages the wisdom 
 - **Event Images:** Support for news-related images via URL links
 - **Interactive Features:**
   - View all comments with pagination
-  - Vote on news authenticity
   - Add comments with optional image URLs
   - Real-time comment display
 
@@ -53,7 +52,6 @@ The Social Anti-Fake News System is a web application that leverages the wisdom 
 ### 💬 Comments System
 - **User Customization:** Custom usernames for comments
 - **Image Support:** Optional image URLs in comments
-- **Pagination:** Efficient comment browsing
 - **Real-time Display:** Comments appear immediately
 
 ## Technical Stack
@@ -112,8 +110,8 @@ src/
 ## Mock Data
 
 The application includes comprehensive mock data with:
-- **20+ News Articles** - Diverse topics and authenticity levels
-- **Realistic Content** - Varied news scenarios and reporting styles
+- **40 News Articles** - Diverse topics and authenticity levels
+- **Real-world News Examples** - Varied news scenarios and reporting styles
 - **Vote Statistics** - Pre-populated voting data for demonstration
 - **User Comments** - Sample community feedback and discussions
 
@@ -128,7 +126,7 @@ The application includes comprehensive mock data with:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/chartchai-class/project-01-the-anti-fake-news-system-bengbeng33.git
-   cd project-01-the-anti-fake-news-system-bengbeng33
+   cd project-01-the-anti-fake-news-system
    ```
 
 2. **Install dependencies**
@@ -157,7 +155,7 @@ The application includes comprehensive mock data with:
 ### Vercel Deployment
 The application is deployed on Vercel for easy access and scalability.
 
-**Live Demo:** ...[will be put here later]...
+**Live Demo:** https://project-01-the-anti-fake-news-syste-olive.vercel.app/
 
 ### Build for Production
 ```bash
@@ -166,7 +164,7 @@ npm run build
 
 ## Demo Video
 
-**Demo Video URL:** ...[will be put here later]...
+**Demo Video URL:** https://youtu.be/YXxo2RaqCGs
 
 The demo video showcases:
 - Home page functionality and filtering
